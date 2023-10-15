@@ -1,6 +1,6 @@
 import React from 'react'
 import {BrowserRouter, Route, Routes} from "react-router-dom"
-import Signin from './Pages/signin'
+import Signin from './Pages/Signin'
 import Signup from './Pages/Signup'
 import Notes from './Pages/Notes'
 
