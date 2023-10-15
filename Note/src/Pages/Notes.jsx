@@ -31,10 +31,12 @@ const Notes = () => {
 
   const handleDelete = (id) => {
     const leftNotes = notes.filter((note) => note.id !== id);
+    console.log(id,leftNotes)
     setNotes(leftNotes);
+    setNoteInfo({ ...noteInfo, allNotes: leftNotes })
+    
   };
   
-
   const handleChange = (e) => {
     setState({ ...state, [e.target.name]: e.target.value });
   };
@@ -52,9 +54,11 @@ const Notes = () => {
         note: state.note,
         title: state.title,
         user: "",
+        id: noteInfo.allNotes.length + 1
       },
     ];
 
+    console.log(noteInfo, data)
     try {
       await setDoc(doc(notesRef, user?.email), {
         notes: data,
