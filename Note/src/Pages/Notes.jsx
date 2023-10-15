@@ -30,10 +30,10 @@ const Notes = () => {
   });
 
   const handleDelete = (id) => {
-    const leftNotes = notes.filter((note) => note.id !== id);
+    const leftNotes = noteInfo.allNotes.filter((note) => note.id !== id);
     console.log(id,leftNotes)
     setNotes(leftNotes);
-    setNoteInfo({ ...noteInfo, allNotes: leftNotes })
+    setNoteInfo({ ...noteInfo, allNotes:leftNotes })
     
   };
   
@@ -79,14 +79,6 @@ const Notes = () => {
       id: Math.random() * 10,
     });
   };
-
-  // useEffect(() => {
-  //   const tempUser = localStorage.getItem('user');
-
-  //   if (!tempUser) {
-  //     navigate('/');
-  //   }
-  // }, []);
 
   const getAllNotes = async () => {
     setFetchingNotes(true);
