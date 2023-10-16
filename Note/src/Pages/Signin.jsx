@@ -104,7 +104,7 @@ const Signin = () => {
         <div className="flex">
           <p>Don't have an account?</p>
           <button type="button" className=" text-blue-900">
-            <Link to="/signup">Sign Up</Link>
+            <Link to="/">Sign Up</Link>
           </button>
         </div>
       </form>
