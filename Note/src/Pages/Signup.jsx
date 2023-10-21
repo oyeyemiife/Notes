@@ -48,7 +48,8 @@ const Signup = () => {
   };
 
   return (
-    <div className="flex p-14 justify-center">
+    <div className="grid gap-5 p-14 justify-center">
+      <h1 className="text-center p-4 text-3xl bg-blue-100 font-semibold text-slate-400 shadow-xl">WELCOME TO MY NOTE'S WEBSITE</h1>
       <form
         className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
         onSubmit={signUp}
